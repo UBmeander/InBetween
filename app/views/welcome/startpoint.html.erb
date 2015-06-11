@@ -1,0 +1,18 @@
+<!-- startpoint = index in previous projects -->
+
+<h1>Welcome to InBetween</h1>
+<p>We are here to help you Meet!</p>
+
+<ul>
+	<li>Give us your Startpoint</li>
+	<li>Give us the Startpoint of whom you're meeting </li>
+	<li>We'll find the point in the middle</li>
+</ul>
+
+<% @welcome %>
+
+<% @welcome_pics.each do |pic| %>
+	<li><%= image_tag pic, width: '300px', height: '300px' %></li>
+<% end %>
+
+<div id="map-canvas"></div>
