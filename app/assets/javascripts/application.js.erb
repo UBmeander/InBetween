@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+// Current map display
 $(document).ready(function(){
 	function initialize() {
 
@@ -28,19 +29,24 @@ $(document).ready(function(){
 		var map = new google.maps.Map(document.getElementById('map-canvas'),
 			mapOptions);
 
-			var marker = new google.maps.Marker({
+			var marker1 = new google.maps.Marker({
 			position: myLatLng,
 			map: map, 
 			animation: google.maps.Animation.DROP,
+			title: 'Startpoint 1'
 
-			title: 'Residence'
+			// var marker2 = new google.maps.Marker({
+			// position: relative,
+			// map: map, 
+			// animation: google.maps.Animation.DROP
+			//title = 'Startpoint 2'
 		});
 
 		var contentString = 
-			<ul>
-				<li>'<h2>Startpoint 1</h2>' + '<p>This is you</p>'</li>
-				<li>'<h2>Startpoint 2</h2>' + '<p>This is the person you are meeting</p>'</li>
-			</ul>
+			
+				'<h2>Startpoint 1</h2>' + '<p>This is you</p>'
+				'<h2>Startpoint 2</h2>' + '<p>This is the person you are meeting</p>'
+			;
 
 		var infoWindow = new google.maps.InfoWindow({
 			content: contentString
@@ -53,3 +59,4 @@ $(document).ready(function(){
 
 	google.maps.event.addDomListener(window, 'load', initialize);
 });
+

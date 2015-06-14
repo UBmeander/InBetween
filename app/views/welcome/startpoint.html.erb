@@ -1,4 +1,4 @@
-<!-- startpoint = index in previous projects -->
+startpoint = index in previous projects -->
 
 <h1>Welcome to InBetween</h1>
 <p>We are here to help you Meet!</p>
@@ -12,7 +12,13 @@
 <% @welcome %>
 
 <% @welcome_pics.each do |pic| %>
-	<li><%= image_tag pic, width: '300px', height: '300px' %></li>
+	<%= image_tag pic, width: '300px', height: '300px' %>
 <% end %>
 
-<div id="map-canvas"></div>
+<!-- Display one marker -->
+<div id="map-canvas"></div>  
+
+<!-- Display multiple markers -->
+<!-- <div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Midlemes</h1>
+
+<%= form_tag location_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Around", :name => nil %>
+  </p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @midlemes.each do |midleme| %>
+      <tr>
+        <td><%= midleme.location %></td>
+        <td><%= midleme.latitude %></td>
+        <td><%= midleme.longitude %></td>
+        <td><%= link_to 'Show', midleme %></td>
+        <td><%= link_to 'Edit', edit_midleme_path(midleme) %></td>
+        <td><%= link_to 'Destroy', midleme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Midleme', new_midleme_path %>

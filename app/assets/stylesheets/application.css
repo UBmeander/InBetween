@@ -14,6 +14,10 @@
  *= require_self
  */
 
+/*#map_wrapper {
+    height: 400px;
+}*/
+
 #map-canvas {
 	width: 95%;
 	height: 500px;
