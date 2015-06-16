@@ -16,11 +16,8 @@
 </p>
 
 <h3>Nearby Locations</h3>
-<ul>
-<% for location in @location.nearbys(5) %>
-	<li><%= link_to location.address, location %> (<%= location.distance.round(1) %> miles)</li>
-<% end %>
-</ul>
+<%= @location.nearbys(100) %>
+
 
 
 <%= link_to 'Edit', edit_midleme_path(@midleme) %> |

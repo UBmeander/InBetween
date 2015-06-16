@@ -1,6 +1,11 @@
 class Midleme < ActiveRecord::Base
-	attr_accessible :address, :latitude, :longitude
+	belongs_to :location
+	
+	attr_accessor :address, :latitude, :longitude
 	geocoded_by :address
+	after_validation :geocode
 
-	after_validation :geocode, :if => :address_changed?
+	reverse_geocoded_by :latitude, :longitude
+	after_validation :reverse_geocode
+
 end

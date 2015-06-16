@@ -19,7 +19,7 @@ class MidlemesController < ApplicationController
   # GET /midlemes/1
   # GET /midlemes/1.json
   def show
-    @location = Location.find(params[:id])
+    @location = Midleme.find(params[:id])
   end
 
   # GET /midlemes/new

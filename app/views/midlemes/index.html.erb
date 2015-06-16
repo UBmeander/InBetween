@@ -2,12 +2,10 @@
 
 <h1>Listing Midlemes</h1>
 
-<%= form_tag location_path, :method => :get do %>
-  <p>
+
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search Around", :name => nil %>
   </p>
-<% end %>
 
 <table>
   <thead>
