@@ -18,7 +18,7 @@ class MidlemesControllerTest < ActionController::TestCase
 
   test "should create midleme" do
     assert_difference('Midleme.count') do
-      post :create, midleme: { latitude: @midleme.latitude, location: @midleme.location, longitude: @midleme.longitude }
+      post :create, midleme: { latitude: @midleme.latitude, location_id: @midleme.location_id, longitude: @midleme.longitude }
     end
 
     assert_redirected_to midleme_path(assigns(:midleme))
@@ -35,7 +35,7 @@ class MidlemesControllerTest < ActionController::TestCase
   end
 
   test "should update midleme" do
-    patch :update, id: @midleme, midleme: { latitude: @midleme.latitude, location: @midleme.location, longitude: @midleme.longitude }
+    patch :update, id: @midleme, midleme: { latitude: @midleme.latitude, location_id: @midleme.location_id, longitude: @midleme.longitude }
     assert_redirected_to midleme_path(assigns(:midleme))
   end
 

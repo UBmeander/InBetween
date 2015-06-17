@@ -2,7 +2,7 @@
 
 <p>
   <strong>Location:</strong>
-  <%= @midleme.location %>
+  <%= @midleme.location_id %>
 </p>
 
 <p>
@@ -14,11 +14,6 @@
   <strong>Longitude:</strong>
   <%= @midleme.longitude %>
 </p>
-
-<h3>Nearby Locations</h3>
-<%= @location.nearbys(100) %>
-
-
 
 <%= link_to 'Edit', edit_midleme_path(@midleme) %> |
 <%= link_to 'Back', midlemes_path %>

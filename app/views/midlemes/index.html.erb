@@ -2,11 +2,6 @@
 
 <h1>Listing Midlemes</h1>
 
-
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Around", :name => nil %>
-  </p>
-
 <table>
   <thead>
     <tr>
@@ -20,7 +15,7 @@
   <tbody>
     <% @midlemes.each do |midleme| %>
       <tr>
-        <td><%= midleme.location %></td>
+        <td><%= midleme.location_id %></td>
         <td><%= midleme.latitude %></td>
         <td><%= midleme.longitude %></td>
         <td><%= link_to 'Show', midleme %></td>

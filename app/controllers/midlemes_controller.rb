@@ -1,15 +1,6 @@
 class MidlemesController < ApplicationController
   before_action :set_midleme, only: [:show, :edit, :update, :destroy]
 
-  def index
-    if params[:search].present?
-       @locations = Location.near(params[:search], 10, :order => :distance)
-    else 
-        @locations = Location.all
-    end
-  end
-
-
   # GET /midlemes
   # GET /midlemes.json
   def index
@@ -19,7 +10,6 @@ class MidlemesController < ApplicationController
   # GET /midlemes/1
   # GET /midlemes/1.json
   def show
-    @location = Midleme.find(params[:id])
   end
 
   # GET /midlemes/new
@@ -79,6 +69,6 @@ class MidlemesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def midleme_params
-      params.require(:midleme).permit(:location, :latitude, :longitude)
+      params.require(:midleme).permit(:location_id, :latitude, :longitude)
     end
 end
